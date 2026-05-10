@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trajectory - 自动记录你的足迹路线</title>
+    <meta
+      name="description"
+      content="Trajectory 是一个 iOS 足迹记录应用，自动记录路线、按日期归档、统计里程，并支持 GPX 导出。"
+    >
+    <meta property="og:title" content="Trajectory - 自动记录你的足迹路线">
+    <meta
+      property="og:description"
+      content="用 Trajectory 自动记录每天走过的路线，把足迹、日历、统计和 GPX 导出放在本机。"
+    >
+    <meta property="og:image" content="https://ssdwgg.github.io/Trajectory/assets/trajectory-icon.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="assets/trajectory-icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Trajectory 首页">
+        <img src="assets/trajectory-icon.png" alt="" width="40" height="40">
+        <span>Trajectory</span>
+      </a>
+      <nav aria-label="主要导航">
+        <a href="#features">功能</a>
+        <a href="#privacy">隐私</a>
+        <a href="https://github.com/SSDWGG/Trajectory">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>自动记录你的足迹路线</h1>
+          <p>
+            Trajectory 会在获得定位权限后持续记录运动轨迹，把每天的路线、里程、时长和定位点整理成清晰的本地足迹档案。
+          </p>
+          <div class="hero-actions" aria-label="主要操作">
+            <a class="button primary" href="https://github.com/SSDWGG/Trajectory">查看源码</a>
+            <a class="button secondary" href="#features">了解功能</a>
+          </div>
+        </div>
+
+        <div class="phone-preview" aria-label="Trajectory 应用界面预览">
+          <div class="phone-shell">
+            <div class="phone-status">
+              <span>9:41</span>
+              <span>定位中</span>
+            </div>
+            <div class="app-card tracking-card">
+              <img src="assets/trajectory-icon.png" alt="Trajectory app icon" width="56" height="56">
+              <div>
+                <h2>自动记录中</h2>
+                <p>权限 始终允许，最后位置 31.23042, 121.47370</p>
+              </div>
+              <span class="status-dot"></span>
+            </div>
+            <div class="map-card">
+              <svg viewBox="0 0 320 230" role="img" aria-label="橙色轨迹路线示意图">
+                <rect width="320" height="230" rx="18"></rect>
+                <path class="grid-line" d="M0 62H320M0 126H320M0 190H320M74 0V230M156 0V230M238 0V230"></path>
+                <path class="route-glow" d="M42 184C84 128 109 166 137 116C169 58 214 78 238 40C257 10 281 26 292 52"></path>
+                <path class="route" d="M42 184C84 128 109 166 137 116C169 58 214 78 238 40C257 10 281 26 292 52"></path>
+                <circle class="route-start" cx="42" cy="184" r="8"></circle>
+                <circle class="route-end" cx="292" cy="52" r="8"></circle>
+              </svg>
+            </div>
+            <div class="metric-grid">
+              <div>
+                <strong>12.8 km</strong>
+                <span>总里程</span>
+              </div>
+              <div>
+                <strong>7 天</strong>
+                <span>记录天数</span>
+              </div>
+              <div>
+                <strong>1h 24m</strong>
+                <span>今日时长</span>
+              </div>
+              <div>
+                <strong>268</strong>
+                <span>定位点</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-band" id="features">
+        <div class="section-heading">
+          <h2>从路线记录到回看统计，一次完成</h2>
+          <p>应用围绕日常后台记录设计，打开后自动开始留痕，之后按日期、地图和统计视角回看。</p>
+        </div>
+        <div class="features">
+          <article>
+            <span class="feature-icon">01</span>
+            <h3>自动定位记录</h3>
+            <p>支持后台定位、记录间距和定位精度配置，适合通勤、步行、旅行和短时运动。</p>
+          </article>
+          <article>
+            <span class="feature-icon">02</span>
+            <h3>地图路线回看</h3>
+            <p>用 MapKit 绘制当天路线，标记起点、终点和轨迹点，让每段移动都有清晰上下文。</p>
+          </article>
+          <article>
+            <span class="feature-icon">03</span>
+            <h3>日历与统计</h3>
+            <p>自动归档每天足迹，统计总里程、本月里程、记录天数、平均距离和近 14 天趋势。</p>
+          </article>
+          <article>
+            <span class="feature-icon">04</span>
+            <h3>GPX 导出</h3>
+            <p>轨迹数据保存在本机，可生成并分享 GPX 文件，方便导入其他地图或运动工具。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="privacy-section" id="privacy">
+        <div>
+          <h2>本机优先的数据保存方式</h2>
+          <p>
+            Trajectory 当前不依赖远程服务器。轨迹点保存在设备本机，你可以在应用内清空本地足迹，也可以导出 GPX 文件自行管理。
+          </p>
+        </div>
+        <ul class="privacy-list">
+          <li>定位权限由系统设置管理</li>
+          <li>轨迹数据默认保存在本机</li>
+          <li>支持一键清空本地记录</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <span>Trajectory</span>
+      <a href="https://github.com/SSDWGG/Trajectory">github.com/SSDWGG/Trajectory</a>
+    </footer>
+  </body>
+</html>
